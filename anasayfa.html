@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css'>
+    <link rel="stylesheet" href="anasayfa.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>   
+    <div class="body-div">
+      <div id="nav-bar">         
+        <div id="nav-header"><a id="nav-title" target="_blank">SOVO-TOZOGLU</a>
+          <hr/>
+        </div>
+        <div id="nav-content">
+          <div class="nav-button" onclick="window.location.href = 'anasayfa.html';"><i class="fas fa-home"></i><span><a href="anasayfa.html">Ana Sayfa</a></span>
+        </div>
+          <div class="nav-button" onclick="window.location.href = 'project.html';"><i class="fas fa-project-diagram"></i></i><span><a href="project.html">Projeler</a></span></div>   
+          <hr/>         
+          <div class="nav-button" onclick="window.location.href = 'musteri.html';"><i class="fas fa-users"></i><a href="musteri.html"><span>Müşteri</span></a></div>
+          <div class="nav-button" onclick="window.location.href = 'tedarikci.html';"><i class="fas fa-truck"></i><a href="tedarikci.html"><span>Tedarikçi</span></a></div>
+          <hr/>
+          <div class="nav-button" onclick="window.location.href = 'anasayfa.html';"><i class="fas fa-wallet"></i><span>Satış Teklif</span></div>            
+          <div class="nav-button" onclick="window.location.href = 'anasayfa.html';"><i class="fas fa-box"></i><span>Stok</span></div>
+          <div class="nav-button" onclick="window.location.href = 'anasayfa.html';"><i class="fas fa-wrench"></i><span>İşletme Bakım</span></div>
+          <div class="nav-button" onclick="window.location.href = 'anasayfa.html';"><i class="fas fa-chart-line"></i><span>Raporlama</span></div>
+          <div id="nav-content-highlight"></div>
+        </div>
+        <input id="nav-footer-toggle" type="checkbox"/>
+        <div id="nav-footer">
+          <div id="nav-footer-heading">
+            <div id="nav-footer-avatar"><i class="fas fa-user"></i></div>
+            <div id="nav-footer-titlebox"><span id="nav-footer-title" target="_blank">Yönetici</span><span id="nav-footer-subtitle">Admin</span></div>
+            <label for="nav-footer-toggle"><i class="fas fa-caret-up"></i></label>
+          </div>
+          <div id="nav-footer-content">
+          </div>
+        </div>
+      </div>
+      <div class="right-menu">
+        <div class="up">
+          <div style="background-image:url(img/main1.png);" class="projeler card"></div>
+          <div style="background-image:url(img/main2.png);" class="sales card"></div>
+          <div style="background-image:url(img/main3.png);" class="stock card"></div>
+        </div>
+        <div class="down">
+          <div style="background-image:url(img/main4.png);" class="business-maintenance card"></div>
+          <div style="background-image:url(img/main5.png);" class="reporting card"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

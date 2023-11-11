@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="gelir-detay.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <div class="body-div">      
+            
+    <div class="window giderWindow">
+      <div class="container">
+          <h3 id="gider-modal" class="modal-kapat">X</h3>
+          <div class="title">Yapılan Ödeme</div>
+          <form action="#">
+              <div class="user-details">
+                  <div class="input-box">
+                      <span class="details">Ödeme Yapan Firma</span>
+                      <input type="text" placeholder="Ödeme yapan firmayı girin">
+                  </div>
+                  <div class="input-box">
+                      <span class="details">Proje Adı</span>
+                      <input type="text" placeholder="Proje adını girin">
+                  </div>
+                  <div class="input-box">
+                      <span class="details">Ödeme Yapılan Firma</span>
+                      <input type="text" placeholder="Ödeme yapılan firmayı girin">
+                  </div>
+                  <div class="input-box">
+                      <span class="details">Gider Detayı</span>
+                      <input type="text" placeholder="Gider detayı girin" required="required"/>
+                  </div>
+                  <div class="input-box">
+                      <span class="details">Tutar TL/USD</span>
+                      <input type="text" placeholder="Tutar girin" required="required"/>
+                  </div>
+                  <div class="input-box">
+                      <span class="details">Dolar Kuru</span>
+                      <input type="text" placeholder="Dolar kuru" required="required"/>
+                  </div>
+                  <div class="input-box">
+                      <span class="details">Banka</span>
+                      <select id="" name="" required="required">
+                          <option value="">Seç</option>
+                          <option value="Evet">Halkbank</option>
+                          <option value="Hayır">VakıfBank</option>
+                          <option value="Evet">Ziraat Bankası</option>
+                          <option value="Hayır">Akbank</option>
+                          <option value="Evet">Fibabanka</option>
+                          <option value="Hayır">Şekerbank</option>
+                          <option value="Evet">Türkiye İş Bankası</option>
+                          <option value="Hayır">Yapı Kredi</option>
+                          <option value="Evet">DenizBank</option>
+                          <option value="Hayır">Garanti BBVA</option>
+                          <option value="Evet">HSBC</option>
+                          <option value="Hayır">ICBC Turkey Bank</option>
+                          <option value="Evet">ING</option>
+                          <option value="Hayır">Odeabank</option>
+                          <option value="Evet">QNB Finansbank</option>
+                          <option value="Hayır">TEB</option>
+                      </select>
+                  </div>
+                  <div class="input-box">
+                      <span class="details">Tarih</span>
+                      <input class="coc-input" type="date" name="dateofbirth" id="dateofbirth">
+                  </div>
+              </div>
+
+              <div class="button">
+                  <input type="submit" value="Kaydet"/>
+              </div>
+          </form>
+      </div>
+  </div>  
+      <div class="top-menu">
+        <div id="title-div">
+          <span>SOVO</span>
+          <span>TOZOGLU</span>
+        </div>
+        <div id="top-right-menu">
+          <div class="menu-icon">
+            <a href="project-start.html"><button id="backBtn" class="button-project"><i class="fa-solid fa-arrow-left"></i></button></a>
+          </div>
+          
+          <div id="is-bedeli-text"><span>İş Bedeli</span></div>
+          
+          
+          <div class="content">
+            <button id="gelir-ac" class="button2" >Gelir Ekle</button>
+            <button class="button1">Filitrele</button>
+            <div class="search">
+              <div class="icon"></div>
+              <div class="input">
+                <input id="mysearch" type="text" placeholder="Ara">
+              </div>
+              <span class="clear" onclick="document.getElementById('mysearch').value = ''"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="window gelirWindow">
+        <div class="container">
+            <h3 id="gelir-modal" class="modal-kapat">X</h3>
+            <div class="title">Gelir Ekle</div>
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Proje Adı</span>
+                        <input type="text" placeholder="Proje adını girin">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Alıcı Firma</span>
+                        <input type="text" placeholder="Alıcı firma girin">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Alınan Miktar</span>
+                        <input type="text" placeholder="Alınan miktarı girin" required="required">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Dolar Kuru</span>
+                        <input type="text" placeholder="Dolar Kuru" required="required">
+                    </div>
+                    <div id="gelir-file-add-box" class="input-box file-input">                                     
+                            <input type="file" id="gelir-file-input" multiple />
+                            <label for="gelir-file-input">
+                              <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                              &nbsp; Dosya Seç
+                            </label>
+                            <div id="gelir-num-of-files">Seçilen dosya yok</div>
+                            <ul id="gelir-files-list"></ul>        
+                    </div>                            
+                </div>
+                <div class="gender-details">
+                    <input type="radio" name="gender" id="dot-1">
+                    <input type="radio" name="gender" id="dot-2">
+                    <input type="radio" name="gender" id="dot-3">
+                    <span class="gender-title">Ödeme Türü</span>
+                    <div class="category">
+                        <label for="dot-1">
+                            <span class="dot one"></span>
+                            <span class="gender">KREDİ KARTI
+                            </span>
+                        </label>
+                        <label for="dot-2">
+                            <span class="dot two"></span>
+                            <span class="gender">EFT/Havale</span>
+                        </label>
+                        <label for="dot-3">
+                            <span class="dot three"></span>
+                            <span class="gender">ÇEK</span>
+                        </label>
+                        <div class="coc-form">
+                            <div class="coc-block-row">
+                                <div class="coc-block">
+                                    <input class="coc-input" type="date" name="dateofbirth" id="dateofbirth">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="button">
+                    <input type="submit" value="Kaydet">
+                </div>
+            </form>
+        </div>
+    </div> 
+        <div id="container">
+          
+          <div class="firma-bar">
+            <ul id="firmaUl">                
+            </ul>
+            
+          </div>
+          <div class="right-menu">            
+            <div class="column view-1"><div id="gider-acc" class="head"><span>İş Bedeli</span></div>
+            <table id="table" class="table table-sortable">
+              <thead>
+                <th>Proje Adı</th>
+                <th scope="col">Alıcı Firma</th>
+                <th scope="col">Ödeme Türü</th>
+                <th scope="col">Tutar(TL)</th>
+                <th scope="col">Kur</th>
+                <th scope="col">Tutar(USD)</th>
+              </thead>  
+              <tbody id="tbody">   
+                <tr id="is-accc">
+                  <td >OZK2023000000769
+                  </td>
+                  <td >14.06.2023</td>
+                  <td >4105.BORDÜR</td>
+                  <td >₺77.272,54</td>
+                  <td >23,3632</td>
+                  <td >$3.265,06</td>
+                </tr>   
+                <tr>
+                  <td >OZK2023000000907</td>
+                  <td >14.07.2023</td>
+                  <td >4105.BORDÜR</td>
+                  <td >₺52.388,16</td>
+                  <td >23,3632</td>
+                  <td >$2.000,18</td>
+                </tr>                             
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td class="right" colspan="3">Total:</td>
+                  <td class="right">₺129.660,7</td>
+                  <td class="right" colspan="2">$5.265,24</td>
+                </tr>
+              </tfoot>
+          </table>     
+                  
+          </div>
+          
+        </div>
+                      
+        </div>        
+      </div>
+<script src="gelir-detay.js"></script>
+</body>
+</html>

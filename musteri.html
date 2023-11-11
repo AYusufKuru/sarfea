@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="musteri.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+</head>
+<body>
+  <div class="body-div">
+    <div class="window musteriWindow">
+      <div class="container">
+          <h3 id="musteri-modal" class="modal-kapat">X</h3>
+          <div class="title">Müşteri Ekle</div>
+          <form action="#">
+              <div class="user-details">
+                <div class="input-box">
+                  <span class="details">Firma Adı</span>
+                  <input type="text" placeholder="Firma adı girin">
+              </div>
+              <div class="input-box">
+                  <span class="details">Muhattap</span>
+                  <input type="text" placeholder="Muhattap girin">
+              </div>
+              <div class="input-box">
+                  <span class="details">Telefon</span>
+                  <input type="text" placeholder="Telefon girin">
+              </div>
+              <div class="input-box">
+                  <span class="details">E-posta</span>
+                  <input type="text" placeholder="E-posta girin" required="required"/>
+              </div>
+              <div class="input-box">
+                  <span class="details">Bölge</span>
+                  <input type="text" placeholder="Bölge girin" required="required"/>
+              </div>  
+                              
+              </div>
+
+              <div class="button">
+                  <input type="submit" value="Kaydet"/>
+              </div>
+          </form>
+      </div>
+  </div>
+
+      <div id="nav-bar">         
+        <div id="nav-header"><a id="nav-title" target="_blank">SOVO-TOZOGLU</a>
+          <hr/>
+        </div>
+        <div id="nav-content">
+          <div class="nav-button" onclick="window.location.href = 'anasayfa.html';"><i class="fas fa-home"></i><span><a href="anasayfa.html">Ana Sayfa</a></span>
+          </div>
+            <div class="nav-button" onclick="window.location.href = 'project.html';"><i class="fas fa-project-diagram"></i></i><span><a href="project.html">Projeler</a></span></div>   
+            <hr/>         
+            <div class="nav-button" onclick="window.location.href = 'musteri.html';"><i class="fas fa-users"></i><a href="musteri.html"><span>Müşteri</span></a></div>
+            <div class="nav-button" onclick="window.location.href = 'tedarikci.html';"><i class="fas fa-truck"></i><a href="tedarikci.html"><span>Tedarikçi</span></a></div>
+          <hr/>
+          <div class="nav-button"><i class="fas fa-wallet"></i><span>Satış Teklif</span></div>            
+          <div class="nav-button"><i class="fas fa-box"></i><span>Stok</span></div>
+          <div class="nav-button"><i class="fas fa-wrench"></i><span>İşletme Bakım</span></div>
+          <div class="nav-button"><i class="fas fa-chart-line"></i><span>Raporlama</span></div>
+          <div id="nav-content-highlight"></div>
+        </div>
+        <input id="nav-footer-toggle" type="checkbox"/>
+        <div id="nav-footer">
+          <div id="nav-footer-heading">
+            <div id="nav-footer-avatar"><i class="fas fa-user"></i></div>
+            <div id="nav-footer-titlebox"><span id="nav-footer-title" target="_blank">Yönetici</span><span id="nav-footer-subtitle">Admin</span></div>
+            <label for="nav-footer-toggle"><i class="fas fa-caret-up"></i></label>
+          </div>
+          <div id="nav-footer-content">
+          </div>
+        </div>
+      </div>  
+      <div class="right-menu"> 
+        <div class="top-menu">
+          <span>Müşteriler</span>
+          <div class="content">                      
+            <button class="button1">Sırala</button>
+            <button class="button1">Filitrele</button>    
+            <button id="musteri-ac" class="button2" >Müşteri Ekle</button>          
+          </div>
+        </div>
+
+        <div class="lists">         
+          <table id="table" class="table table-sortable">   
+            <thead>
+              <th>Firma Adı</th>
+              <th scope="col">Muhattap</th>
+              <th scope="col">Telefon</th>
+              <th scope="col">E-posta</th>
+              <th scope="col">Bölge</th>
+            </thead>  
+            <tbody id="tbody">  
+              <tr>
+                <td>Tozoglu</td>
+                <td>Enes</td>
+                <td>05487526587</td>
+                <td>menes@gmail.com</td>
+                <td>Konya</td>
+              </tr>                                     
+            </tbody>
+            
+          </table>            
+        </div>
+      </div>   
+  </div>
+<script src="musteri.js"></script>
+</body>
+</html>

@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="gerceklesen-maliyet.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+    <div class="body-div">      
+      
+      <div class="window isWindow">
+        <div class="container">
+            <h3 id="is-modal" class="modal-kapat">X</h3>
+            <div class="title">Yapılan İş</div>
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">Ödeme Yapan Firma</span>
+                        <input type="text" placeholder="Ödeme yapan firmayı girin">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Proje Adı</span>
+                        <input type="text" placeholder="Proje adını girin">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Ödeme Yapılan Firma</span>
+                        <input type="text" placeholder="Ödeme yapılan firmayı girin">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Gider Detayı</span>
+                        <input type="text" placeholder="Gider detayı girin" required="required"/>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Tutar TL/USD</span>
+                        <input type="text" placeholder="Tutar girin" required="required"/>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Dolar Kuru</span>
+                        <input type="text" placeholder="Dolar kuru" required="required"/>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Fatura Numarası</span>
+                        <input type="text" placeholder="Fatura numarasını girin">
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Tarih</span>
+                        <input class="coc-input" type="date" name="dateofbirth" id="dateofbirth">
+                    </div>
+                    <div id="is-file-add-box" class="input-box file-input">                                     
+                      <input type="file" id="is-file-input" multiple />
+                      <label for="is-file-input">
+                        <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                        &nbsp; Dosya Seç
+                      </label>
+                      <div id="is-num-of-files">Seçilen dosya yok</div>
+                      <ul id="is-files-list"></ul>        
+              </div> 
+                </div>
+
+                <div class="button">
+                    <input type="submit" value="Kaydet"/>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="window giderWindow">
+      <div class="container">
+          <h3 id="gider-modal" class="modal-kapat">X</h3>
+          <div class="title">Yapılan Ödeme</div>
+          <form action="#">
+              <div class="user-details">
+                  <div class="input-box">
+                      <span class="details">Ödeme Yapan Firma</span>
+                      <input type="text" placeholder="Ödeme yapan firmayı girin">
+                  </div>
+                  <div class="input-box">
+                      <span class="details">Proje Adı</span>
+                      <input type="text" placeholder="Proje adını girin">
+                  </div>
+                  <div class="input-box">
+                      <span class="details">Ödeme Yapılan Firma</span>
+                      <input type="text" placeholder="Ödeme yapılan firmayı girin">
+                  </div>
+                  <div class="input-box">
+                      <span class="details">Gider Detayı</span>
+                      <input type="text" placeholder="Gider detayı girin" required="required"/>
+                  </div>
+                  <div class="input-box">
+                      <span class="details">Tutar TL/USD</span>
+                      <input type="text" placeholder="Tutar girin" required="required"/>
+                  </div>
+                  <div class="input-box">
+                      <span class="details">Dolar Kuru</span>
+                      <input type="text" placeholder="Dolar kuru" required="required"/>
+                  </div>
+                  <div class="input-box">
+                      <span class="details">Banka</span>
+                      <select id="" name="" required="required">
+                          <option value="">Seç</option>
+                          <option value="Evet">Halkbank</option>
+                          <option value="Hayır">VakıfBank</option>
+                          <option value="Evet">Ziraat Bankası</option>
+                          <option value="Hayır">Akbank</option>
+                          <option value="Evet">Fibabanka</option>
+                          <option value="Hayır">Şekerbank</option>
+                          <option value="Evet">Türkiye İş Bankası</option>
+                          <option value="Hayır">Yapı Kredi</option>
+                          <option value="Evet">DenizBank</option>
+                          <option value="Hayır">Garanti BBVA</option>
+                          <option value="Evet">HSBC</option>
+                          <option value="Hayır">ICBC Turkey Bank</option>
+                          <option value="Evet">ING</option>
+                          <option value="Hayır">Odeabank</option>
+                          <option value="Evet">QNB Finansbank</option>
+                          <option value="Hayır">TEB</option>
+                      </select>
+                  </div>
+                  <div class="input-box">
+                      <span class="details">Tarih</span>
+                      <input class="coc-input" type="date" name="dateofbirth" id="dateofbirth">
+                  </div>
+                  <div id="gider-file-add-box" class="input-box file-input">                                     
+                    <input type="file" id="gider-file-input" multiple />
+                    <label for="gider-file-input">
+                      <i class="fa-solid fa-arrow-up-from-bracket"></i>
+                      &nbsp; Dosya Seç
+                    </label>
+                    <div id="gider-num-of-files">Seçilen dosya yok</div>
+                    <ul id="gider-files-list"></ul>        
+            </div>
+              </div>
+
+              <div class="button">
+                  <input type="submit" value="Kaydet"/>
+              </div>
+          </form>
+      </div>
+  </div>  
+      <div class="top-menu">
+        <div id="title-div">
+          <span>SOVO</span>
+          <span>TOZOGLU</span>
+        </div>
+        <div id="top-right-menu">
+          <div class="menu-icon">
+            <a href="project-start.html"><button id="backBtn" class="button-project"><i class="fa-solid fa-arrow-left"></i></button></a>
+          </div>
+          <button class="button2" id="is-ac">Yapılan İş</button>
+          <div><button>Gerçekleşen Maliyet</button></div>
+          <button id="gider-ac" class="button2" >Yapılan Ödeme</button>
+          
+          <div class="content">
+            <button class="button1">Filitrele</button>
+            <div class="search">
+              <div class="icon"></div>
+              <div class="input">
+                <input id="mysearch" type="text" placeholder="Ara">
+              </div>
+              <span class="clear" onclick="document.getElementById('mysearch').value = ''"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+        
+        <div id="container">
+          
+          <div class="firma-bar">
+            <ul id="firmaUl">                
+            </ul>
+            <button  id="toplam-maliyet">Toplam Maliyet</button>
+          </div>
+          <div class="right-menu">
+            <div class="total-table view-2">
+              <div id="total-table-head" class="head"><span>Toplam Ödeme =&nbsp;</span><span>₺512.458,25</span><span>&nbsp;/&nbsp;</span><span>$52.239,20</span></div>
+            <table class="table table-sortable">
+              <thead>
+                <th>Firma Adı</th>
+                <th scope="col">Yapılan İş(₺)</th>
+                <th scope="col">Yapılan İş($)</th>
+                <th scope="col">Yapılan Ödeme(₺)</th>
+                <th scope="col">Yapılan Ödeme($)</th>
+              </thead>  
+              <tbody>   
+                <tr>
+                  <td >Firma 1</td>
+                  <td >₺129.660,7</td>
+                  <td >$5.265,24</td>
+                  <td >₺77.272,54</td>
+                  <td >$3.265,06</td>
+                </tr>   
+                <tr>
+                  <td >Firma 2</td>
+                  <td >₺250.660,7</td>
+                  <td >$10.265,24</td>
+                  <td >₺52.388,16</td>
+                  <td >$2.265,06</td>
+                </tr>                             
+              </tbody>
+          </table>     
+            </div>
+            <div class="column view-1"><div id="head-is-ac" class="head"><span>Yapılan İş</span></div>
+            <table id="table" class="table table-sortable">
+              <thead>
+                <th>Fatura No</th>
+                <th scope="col">Tarih</th>
+                <th scope="col">Cinsi</th>
+                <th scope="col">Tutar(TL)</th>
+                <th scope="col">Kur</th>
+                <th scope="col">Tutar(USD)</th>
+              </thead>  
+              <tbody id="tbody">   
+                <tr id="tablotr-is-ac">
+                  <td >OZK2023000000769
+                  </td>
+                  <td >14.06.2023</td>
+                  <td >4105.BORDÜR</td>
+                  <td >₺77.272,54</td>
+                  <td >23,3632</td>
+                  <td >$3.265,06</td>
+                </tr>   
+                <tr>
+                  <td >OZK2023000000907</td>
+                  <td >14.07.2023</td>
+                  <td >4105.BORDÜR</td>
+                  <td >₺52.388,16</td>
+                  <td >23,3632</td>
+                  <td >$2.000,18</td>
+                </tr>                             
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td class="right" colspan="3">Total:</td>
+                  <td class="right">₺129.660,7</td>
+                  <td class="right" colspan="2">$5.265,24</td>
+                </tr>
+              </tfoot>
+          </table>     
+                  
+          </div>
+          <div class="head-line view-1"></div>
+          <div class="column column2 view-1">
+            <div id="head-gider-ac" class="head"><span>Yapılan Ödeme</span></div>
+            <table id="table-2" class="table table-sortable">   
+              <thead>
+                <th>Tarih</th>
+                <th scope="col">Açıklama</th>
+                <th scope="col">Ödeme Şekli</th>
+                <th scope="col">Tutar(TL)</th>
+                <th scope="col">Kur</th>
+                <th scope="col">Tutar(USD)</th>
+              </thead>  
+              <tbody id="tbody-2">    
+                <tr id="tabletr-gider-ac">
+                  <td >9.06.2023</td>
+                  <td >TAŞ AVANS</td>
+                  <td >EFT(YAPIKREDİ)</td>
+                  <td >₺25.000,00</td>
+                  <td >23,3632</td>
+                  <td >$1.070,06</td>
+                </tr>  
+                <tr>
+                  <td >22.06.2023</td>
+                  <td >Taş</td>
+                  <td >EFT(YAPIKREDİ)</td>
+                  <td >₺77.272,54</td>
+                  <td >23,6665</td>
+                  <td >$3.265,06</td>
+                </tr>                            
+              </tbody>
+              <tfoot>
+                <tr>
+                  <td class="right" colspan="3">Total:</td>
+                  <td class="right">₺102.272,54</td>
+                  <td class="right" colspan="2">$4.335,12</td>
+                </tr>
+              </tfoot>
+          </table>
+          </div> 
+        </div>
+           
+          <div id="genel-toplam">
+            <span class="view-1">Genel Toplam</span>
+            <label class="view-1" for="">₺55.548.32</label>
+            <label class="view-1" for="">$8.452.21</label>
+          </div>             
+        </div>        
+      </div>
+
+      <script src="gerceklesen-maliyet.js"></script> 
+</body>
+</html>

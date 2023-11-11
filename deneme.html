@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Döviz Kuru Gösterimi</title>
+</head>
+<body>
+    <div id="exchange-rates">
+        <h1>Döviz Kurları</h1>
+        <ul id="currency-list"></ul>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            const apiKey = "API_ANAHTARINIZ"; // ExchangeRatesAPI.io API anahtarını buraya ekleyin
+            const endpoint = `https://api.apilayer.com/exchangerates_data/latest?base=TRY&apikey=${apiKey}`;
+
+            fetch(endpoint)
+                .then(response => response.json())
+                .then(data => {
+                    const currencyList = document.getElementById("currency-list");
+
+                    for (const currency in data.rates) {
+                        const listItem = document.createElement("li");
+                        listItem.innerText = `${currency}: ${data.rates[currency]}`;
+                        currencyList.appendChild(listItem);
+                    }
+                })
+                .catch(error => {
+                    console.error("API isteği başarısız: ", error);
+                });
+        });
+    </script>
+</body>
+</html>
